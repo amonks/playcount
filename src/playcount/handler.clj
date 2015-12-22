@@ -15,7 +15,7 @@
 (def index-memo (memoize index))
 
 (defn leaderboard []
-  (let [scores (sorted-map (:scores @state))]
+  (let [scores (:scores @state)]
     (clojure.string/join "\n"
                          (map
                            (fn [pair]
